@@ -2,6 +2,8 @@ import shlex
 
 cleaned_lines = []
 
+print("the github: https://github.com/I-like-linux/Dodecal")
+
 file_run = input("> ")
 
 if file_run.endswith(".dodecal") or file_run.endswith(".dc.dev"):
