@@ -5,14 +5,14 @@ It uses a syntax inspired by Python mixed with a simple assembly‑style command
 
 | Command | Type of Processing | Arguments (in order) | Function |
 |--------|---------------------|-----------------------|----------|
-| add    | integer/variable    | a | b | var           | Add two integers and store the sum in a variable |
-| sub    | integer/variable    | a | b | var           | Subtract two integers and store the difference in a variable |
-| mul    | integer/variable    | a | b | var           | Multiply two integers and store the product in a variable |
-| div    | integer/variable    | a | b | var           | Divide two integers and store the quotient in a variable |
-| print  | text/int/variable   | text | var | int      | Print text or a variable to the terminal/console |
-| printn | text/int/variable   | text | var | int      | Print text or a variable without a newline |
-| set    | text/int/variable   | text | var | int      | Set a variable to another variable or integer |
-| input  | text/int/variable   | var  | user‑prompt    | Take input from the user and store it in a variable |
+| add    | integer/variable    | a / b / var           | Add two integers and store the sum in a variable |
+| sub    | integer/variable    | a / b / var           | Subtract two integers and store the difference in a variable |
+| mul    | integer/variable    | a / b / var           | Multiply two integers and store the product in a variable |
+| div    | integer/variable    | a / b / var           | Divide two integers and store the quotient in a variable |
+| print  | text/int/variable   | text / var / int      | Print text or a variable to the terminal/console |
+| printn | text/int/variable   | text / var / int      | Print text or a variable without a newline |
+| set    | text/int/variable   | text / var / int      | Set a variable to another variable or integer |
+| input  | text/int/variable   | var  / user‑prompt    | Take input from the user and store it in a variable |
 | label  | n/a                 | n/a                   | Create a jump target that can be referenced later |
 | goto   | n/a                 | n/a                   | Jump to a label and resume execution from there |
 | if     | text/int/variable   | left | op | right     | Run a one‑line if statement; if the condition is true, the next command is executed |
