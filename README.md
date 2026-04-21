@@ -15,7 +15,7 @@ It uses a syntax inspired by Python mixed with a simple assembly‑style command
 | input  | text/int/variable   | var  / user‑prompt    | Take input from the user and store it in a variable |
 | label  | n/a                 | n/a                   | Create a jump target that can be referenced later |
 | goto   | n/a                 | n/a                   | Jump to a label and resume execution from there |
-| if     | text/int/variable   | left | op | right     | Run a one‑line if statement; if the condition is true, the next command is executed |
+| if     | text/int/variable   | left / op / right     | Run a one‑line if statement; if the condition is true, the next command is executed |
 
 
 
