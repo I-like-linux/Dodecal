@@ -1,23 +1,81 @@
-print ^Welcome to the Dodecal Chatbot!^
-print ^Type something to talk to it.^
+print ^welcome to the smarter dodecal chatbot!^
+print ^it learns your name and talks to you.^
+
+set name_set 0
 
 label loop
+
+# ask for name once
+if name_set == 0
+    input name ^whats your name: ^
+    printn ^nice to meet you, ^
+    print name
+    set name_set 1
+endif
+
 set matched 0
 
 input msg ^you: ^
 
-if msg == ^hi^ print ^hello!^
-if msg == ^hi^ set matched 1
+# normalize common punctuation variants
+# (your interpreter has no string ops, so we brute-force)
+if msg == ^hi^ set matched 2
+if msg == ^hi!^ set matched 2
+if msg == ^hi.^ set matched 2
+if msg == ^hi,^ set matched 2
 
-if msg == ^hello^ print ^hey there!^
-if msg == ^hello^ set matched 1
+if matched == 2
+    printn ^hi ^
+    print name
+    set matched 1
+endif
 
-if msg == ^how are you^ print ^im doing good!^
-if msg == ^how are you^ set matched 1
+# hello variants
+if msg == ^hello^ set matched 2
+if msg == ^hello!^ set matched 2
+if msg == ^hello.^ set matched 2
+if msg == ^hello,^ set matched 2
 
-if msg == ^bye^ print ^goodbye!^
-if msg == ^bye^ set matched 1
+if matched == 2
+    printn ^hello ^
+    print name
+    set matched 1
+endif
 
-if matched == 0 print ^i dont understand^
+# how are you
+if msg == ^how are you^
+    print ^im doing good!^
+    set matched 1
+endif
+
+# who are you
+if msg == ^who are you^
+    print ^im a tiny chatbot running in dodecal.^
+    set matched 1
+endif
+
+# science
+if msg == ^science^
+    print ^fun fact: all of this is just text and logic.^
+    set matched 1
+endif
+
+# thanks
+if msg == ^thanks^
+    print ^youre welcome!^
+    set matched 1
+endif
+
+# bye
+if msg == ^bye^
+    print ^goodbye! see you later.^
+    set matched 1
+endif
+
+# fallback
+if matched == 0
+    print ^i dont understand^
+endif
 
 goto loop
+
