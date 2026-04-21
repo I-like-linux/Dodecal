@@ -1,0 +1,23 @@
+print ^Welcome to the Dodecal Chatbot!^
+print ^Type something to talk to it.^
+
+label loop
+set matched 0
+
+input msg ^you: ^
+
+if msg == ^hi^ print ^hello!^
+if msg == ^hi^ set matched 1
+
+if msg == ^hello^ print ^hey there!^
+if msg == ^hello^ set matched 1
+
+if msg == ^how are you^ print ^im doing good!^
+if msg == ^how are you^ set matched 1
+
+if msg == ^bye^ print ^goodbye!^
+if msg == ^bye^ set matched 1
+
+if matched == 0 print ^i dont understand^
+
+goto loop
