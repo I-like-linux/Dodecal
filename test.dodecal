@@ -1,0 +1,21 @@
+print ^hi!^
+
+printn ^hi!^
+print ^ hi2!^
+
+set number 113
+
+if number == 113  print ^number is equal to 113^
+
+print number
+printn number
+print ^ <- that was a number!^
+
+set i 1
+label loop
+
+printn i
+printn ^ ^
+
+add i 1 i
+if i <= 10 goto loop
